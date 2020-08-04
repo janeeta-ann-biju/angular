@@ -9,6 +9,7 @@
     </div>
   </div>
 
+
   <div fxFlex>
     <mat-grid-list cols="2" rowHeight="200px">
       <mat-grid-tile *ngFor="let dish of dishes">
@@ -20,11 +21,10 @@
     </mat-grid-list>
   </div>
 
-  <div fcFlex *ngIf="selectedDish">
     <mat-card>
-  <app-dishdetail></app-dishdetail>
-  </mat-card>
-
-  </div>
-
+      <app-dishdetail></app-dishdetail>
+    </mat-card>
+ 
+  
 </div>
+

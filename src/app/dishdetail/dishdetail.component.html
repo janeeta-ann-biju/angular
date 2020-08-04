@@ -33,15 +33,17 @@
           </mat-card-title>
         </mat-card-header>
         <mat-card-content>
-          <p>{{dish.comment}}
+          <mat-list *ngFor="let element of comments; let i = index">
+          <p>{{dish.comments[i].comment}}
           </p>
-          <p>{{dish.rating}} Stars</p>
-          <p>-- {{comments.author}} {{comments.date | date}}</p>
+          <p>{{dish.comments[i].rating}} Stars</p>
+          <p>-- {{dish.comments[i].author}} {{dish.comments[i].date | date}}</p>
           <p>{{commentForm.value.comment}}</p>
 
           <p>{{commentForm.value.rating}} Stars</p>
 
           <p>-- {{commentForm.value.author}}</p>
+        </mat-list>
         </mat-card-content>
       </mat-card>
     </div>
